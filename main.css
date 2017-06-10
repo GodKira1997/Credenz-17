@@ -1,5 +1,14 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
 body {
     background-color: black;
+}
+
+.heading {
+    padding-top: 10px;
 }
 
 .logo {
