@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <!-- Home -->
     <div id="home">
         <div class="heading container-fluid page">
             <div class="col-xs-3 col-md-1">
@@ -39,14 +40,13 @@
         </div>
         <div id="down" class="page">
             <center>
-                <button class="btn btn-circle">
-                    <span class="glyphicon glyphicon-chevron-up" style="color:white;"></span>
+                <button type="button" onclick="about()" class="btn btn-circle">
+                    <span class="glyphicon glyphicon-chevron-down" style="color:white;"></span>
                 </button>
             </center>
         </div>
-        <div id="footer" class="container-fluid page">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
+        <div id="footer-home" class="container-fluid page">
+            <div class="col-md-offset-4 col-md-4">
                 <div class="col-xs-3"></div>
                 <div class="col-xs-2">
                     <a href="">
@@ -66,12 +66,103 @@
             </div>
         </div>
     </div>
+
+    <!--  Navigation Bar  -->
+    <div class="col-md-offset-4 zind">
+        <ul>
+            <li><a onclick="home()">Home</a></li>
+            <li><a onclick="about()">About</a></li>
+            <li class="active"><a onclick="events()">Events</a></li>
+            <li><a onclick="pingf()">P.I.N.G.</a></li>
+            <li><a onclick="contact()">Contact Us</a></li>
+        </ul>
+    </div>
+    <!--  2nd Page  -->
+
+    <!--  P.I.N.G.  -->
+    <div id="pingp" class="container-fluid div-ht" style="display:none">
+        <div class="row div1">
+            <div class="col-md-5 col-xs-offset-1 col-xs-10">
+                <p id="pingt">
+                    P.I.N.G. is made by a group of zesty individuals, driven by a common purpose of reflecting the present-day youth’s insight on the technical advancements. It showcases a diverse array of topics stretched over the entire confines of technicalities. It provides its readers with a source of inspiration in the form of interviews of reputable people, talking about their commendable lives. It is a contribution, such as it is, to the technical society.
+                </p>
+            </div>
+            <div class="col-md-offset-1 col-md-4">
+                <img class="img-responsive" id="pingimg3" src="images/ping3.png" alt="P.I.N.G. 12.0 and P.I.N.G. 11.1">
+            </div>
+        </div>
+    </div>
+
+    <!--  Events  -->
+
+    <!--   About     -->
+    <div id="aboutp" class="container-fluid div-ht">
+        <div class="div1">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-2">
+                    <img class="img-responsive" src="images/logo%20pisb.png" alt="PISB logo">
+                </div>
+                <div class="col-md-2 col-md-offset-4">
+                    <img class="img-responsive" src="images/IEEEblack.png" alt="IEEE logo">
+                </div>
+            </div>
+            <div class="row" id="divht">
+                <div class="col-md-4 col-md-offset-1 pisbtxt">
+                    <p>PICT IEEE Student Branch (PISB), one of the most active student branches of IEEE, is the proud host of the annual technical event Credenz. It is one of the most innovative and scientific events held in August every year. It is organised exclusively by students of PISB. It has grown manifold since its inception in 2004, and has made a name for itself as a technical renaissance showcasing the young emerging minds of technocrats and administrators. Through its deluge of competitions, lectures, exhibitions and workshops, Credenz endeavors to enkindle the minds of thousands of students visiting annually. Over the years, it has attracted the connoisseurs of engineering and technology. Credenz represents zenith of science and engineering in a landscape of future visionaries and scientists. From thrilling robotic competitions to the enriching workshops, every bit promises to be a fulfilling experience.</p>
+                </div>
+                <div id="divid" class="col-md-offset-1"></div>
+                <div class="col-md-4 col-md-offset-1 pisbtxt">
+                    <p>The Institute of Electrical and Electronics Engineering (IEEE) is an international organization, which has been the nexus for propagating scientific expertise among people all over the globe. IEEE continues to attract students, faculty and professionals from various fields all around the world and is committed to incorporate diversity in thoughts which is essential for scientific development. IEEE serves as a hub to many engineering students and faculty members for expressing their technical acuity to the world and has always been at the forefront of the technical revolution.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script>
     var h = window.innerHeight;
     console.log(h)
     document.getElementById("home").style.height = h + "px";
+    var ht = document.getElementById('divht').offsetHeight;
+    document.getElementById('divid').style.height = ht + 'px';
+    var winht = window.innerHeight;
+    var i;
+    var j = document.getElementsByClassName("div-ht").length;
+    for (i = 0; i < j; i++)
+        document.getElementsByClassName("div-ht")[i].style.height = winht + 'px';
+    var hom = $("#home");
+    var pin = $("#pingp");
+    var eve = $("#");;
+    var abt = $("#aboutp");;
+    var cont = $("#");;
+
+    function home() {
+        pin.hide();
+        eve.hide();
+        abt.hide();
+        hom.show();
+    }
+
+    function pingf() {
+        eve.hide();
+        abt.hide();
+        pin.show();
+    }
+
+    function events() {
+        pin.hide();
+        abt.hide();
+        eve.show();
+    }
+
+    function about() {
+        pin.hide();
+        eve.hide();
+        abt.show();
+        hom.hide();
+    }
+
+    function contact() {}
 
 </script>
 
