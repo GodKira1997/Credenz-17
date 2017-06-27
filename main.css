@@ -168,14 +168,23 @@ div.vertical-line {
 }
 
 .tile{
-    width: 10%;
-    height:10%;
+    width: 13%;
+    height:13%;
     right:45%;
     top:20%;   
     position:absolute;
     
     
 }
+
+.imgclass{
+    
+    margin: 3px;
+    
+    
+}
+
+
 
 #tile1{
     background-color: blue;    
