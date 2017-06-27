@@ -90,7 +90,7 @@ button:hover {
 
 a {
     text-decoration: none !important;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 ul {
@@ -128,7 +128,7 @@ li a {
 }
 
 #pingt {
-    font-size: 29px;
+    font-size: 20px;
     text-align: justify;
     padding-top: 70px;
 }
@@ -167,87 +167,89 @@ div.vertical-line {
     padding-top: 135px;
 }
 
-.tile{
+.tile {
     width: 13%;
-    height:13%;
-    right:45%;
-    top:20%;   
-    position:absolute;
-    
-    
+    height: 13%;
+    right: 45%;
+    top: 20%;
+    position: absolute;
 }
 
-.imgclass{
-    
+.imgclass {
     margin: 3px;
-    
-    
 }
 
-
-
-#tile1{
-    background-color: blue;    
+#tile1 {
+    background-color: blue;
 }
 
-#tile2{
-    background-color: red;    
-}
-#tile3{
-    background-color: darkgreen;    
-}
-#tile4{
-    background-color: orangered;    
-}
-#tile5{
-    background-color: olive;    
-}
-#tile6{
-    background-color: darkred;    
+#tile2 {
+    background-color: red;
 }
 
-
-#tile7{
-    background-color: blue;    
+#tile3 {
+    background-color: darkgreen;
 }
 
-#tile8{
-    background-color: red;    
-}
-#tile9{
-    background-color: darkgreen;    
-}
-#tile10{
-    background-color: orangered;    
-}
-#tile11{
-    background-color: olive;    
-}
-#tile12{
-    background-color: darkred;    
+#tile4 {
+    background-color: orangered;
 }
 
-
-#tile13{
-    background-color: blue;    
+#tile5 {
+    background-color: olive;
 }
 
-#tile14{
-    background-color: red;    
-}
-#tile15{
-    background-color: darkgreen;    
-}
-#tile16{
-    background-color: orangered;    
-}
-#tile17{
-    background-color: olive;    
-}
-#tile18{
-    background-color: darkred;    
+#tile6 {
+    background-color: darkred;
 }
 
+#tile7 {
+    background-color: blue;
+}
+
+#tile8 {
+    background-color: red;
+}
+
+#tile9 {
+    background-color: darkgreen;
+}
+
+#tile10 {
+    background-color: orangered;
+}
+
+#tile11 {
+    background-color: olive;
+}
+
+#tile12 {
+    background-color: darkred;
+}
+
+#tile13 {
+    background-color: blue;
+}
+
+#tile14 {
+    background-color: red;
+}
+
+#tile15 {
+    background-color: darkgreen;
+}
+
+#tile16 {
+    background-color: orangered;
+}
+
+#tile17 {
+    background-color: olive;
+}
+
+#tile18 {
+    background-color: darkred;
+}
 
 @keyframes fadeIn1 {
     0% {
