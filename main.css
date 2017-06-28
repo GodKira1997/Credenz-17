@@ -88,6 +88,14 @@ button:hover {
     width: 100%;
 }
 
+#invisible {
+    background-color: transparent;
+}
+
+.secondpage {
+    
+}
+
 a {
     text-decoration: none !important;
     cursor: pointer;
@@ -148,7 +156,7 @@ div.vertical-line {
 }
 
 .zind {
-    z-index: 100;
+    z-index: 7;
 }
 
 .pisbtxt {

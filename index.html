@@ -65,14 +65,16 @@
                 </div>
             </div>
         </div>
+        <div id="invisible">
+        </div>
     </div>
 
     <!--  Navigation Bar  -->
-    <div class="col-md-offset-4 zind">
+    <div class="col-md-offset-4 zind secondpage">
         <ul>
             <li><a onclick="home()">Home</a></li>
             <li><a onclick="about()">About</a></li>
-            <li class="active"><a onclick="events()">Events</a></li>
+            <li><a onclick="events()">Events</a></li>
             <li><a onclick="pingf()">P.I.N.G.</a></li>
             <li><a onclick="contact()">Contact Us</a></li>
         </ul>
@@ -80,7 +82,7 @@
     <!--  2nd Page  -->
 
     <!--  P.I.N.G.  -->
-    <div id="pingp" class="container-fluid div-ht" style="display:none">
+    <div id="pingp" class="container-fluid div-ht secondpage" style="display:none">
         <div class="row div1">
             <div class="col-md-5 col-xs-offset-1 col-xs-10">
                 <p id="pingt">
@@ -142,7 +144,7 @@
     </div>
 
     <!--   About     -->
-    <div id="aboutp" class="container-fluid div-ht">
+    <div id="aboutp" class="container-fluid div-ht secondpage">
         <div class="div1">
             <div class="row">
                 <div class="col-md-2 col-md-offset-2">
@@ -170,15 +172,48 @@
 
 <script>
     var h = window.innerHeight;
-    console.log(h)
-    document.getElementById("home").style.height = h + "px";
+    var hom = document.getElementById("home");
+    hom.style.height = h + "px";
+    document.getElementById("invisible").style.marginTop = h + "px";
+    document.getElementById("invisible").style.height = h + 100 + "px";
+    
+    var a = document.getElementsByClassName("secondpage");
+    var b = a.length;
+    var n;
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            var winTop = $(window).scrollTop();
+            var top = $("#home").scrollTop();
+            if(winTop < h)
+            {
+                console.log(1);
+                for(n = 0; n < b; n++)
+                {
+                    a[n].style.position = "fixed";
+                    console.log(a[n].style.position);
+                }
+            }
+            else //if(winTop > h)
+            {
+                for(n = 0; n < b; n++)
+                {
+                    hom.hide();
+                    a[n].style.position = "absolute";
+                    console.log(a[n].style.position);
+                }
+            }
+                
+        });
+        
+    });
+    
     var ht = document.getElementById('divht').offsetHeight;
     document.getElementById('divid').style.height = ht + 'px';
-    var winht = window.innerHeight;
     var i;
     var j = document.getElementsByClassName("div-ht").length;
     for (i = 0; i < j; i++)
-        document.getElementsByClassName("div-ht")[i].style.height = winht + 'px';
+        document.getElementsByClassName("div-ht")[i].style.height = h + 'px';
+    
     var hom = $("#home");
     var pin = $("#pingp");
     var eve = $("#event");;
@@ -188,7 +223,6 @@
     function home() {
         pin.hide();
         eve.hide();
-        abt.hide();
         hom.show();
     }
 
